@@ -1,0 +1,105 @@
+[
+    {
+        "id": "R001",
+        "routeNumber": "101",
+        "name": "City Center - Railway Station",
+        "startPoint": "City Center",
+        "endPoint": "Railway Station",
+        "distance": "8.5 km",
+        "estimatedTime": "25 min",
+        "status": "active",
+        "stops": [
+            "S001",
+            "S002",
+            "S003",
+            "S004",
+            "S005"
+        ],
+        "busIds": [
+            "BUS001",
+            "BUS006"
+        ]
+    },
+    {
+        "id": "R002",
+        "routeNumber": "202",
+        "name": "RTC Bus Stand - University",
+        "startPoint": "RTC Bus Stand",
+        "endPoint": "University",
+        "distance": "10.2 km",
+        "estimatedTime": "30 min",
+        "status": "active",
+        "stops": [
+            "S006",
+            "S007",
+            "S008",
+            "S009",
+            "S010"
+        ],
+        "busIds": [
+            "BUS002",
+            "BUS007"
+        ]
+    },
+    {
+        "id": "R003",
+        "routeNumber": "303",
+        "name": "Guntur - Amaravati",
+        "startPoint": "Guntur",
+        "endPoint": "Amaravati",
+        "distance": "28.5 km",
+        "estimatedTime": "55 min",
+        "status": "active",
+        "stops": [
+            "S011",
+            "S012",
+            "S013",
+            "S014",
+            "S015"
+        ],
+        "busIds": [
+            "BUS003",
+            "BUS008"
+        ]
+    },
+    {
+        "id": "R004",
+        "routeNumber": "404",
+        "name": "Brodipet - Namburu",
+        "startPoint": "Brodipet",
+        "endPoint": "Namburu",
+        "distance": "12.8 km",
+        "estimatedTime": "35 min",
+        "status": "active",
+        "stops": [
+            "S016",
+            "S017",
+            "S018",
+            "S019",
+            "S020"
+        ],
+        "busIds": [
+            "BUS004"
+        ]
+    },
+    {
+        "id": "R005",
+        "routeNumber": "505",
+        "name": "NTR Bus Station - Medical College",
+        "startPoint": "NTR Bus Station",
+        "endPoint": "Medical College",
+        "distance": "7.6 km",
+        "estimatedTime": "22 min",
+        "status": "active",
+        "stops": [
+            "S021",
+            "S022",
+            "S023",
+            "S024",
+            "S025"
+        ],
+        "busIds": [
+            "BUS005"
+        ]
+    }
+]

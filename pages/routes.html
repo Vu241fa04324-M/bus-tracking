@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Browse BusTrack bus routes"
+    >
+
+    <title>Bus Routes - BusTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🚌
+                </span>
+
+                <span>
+                    Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="tracking.html"
+                    class="nav-link"
+                >
+                    Live Tracking
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="nav-link active"
+                >
+                    Routes
+                </a>
+
+                <a
+                    href="stops.html"
+                    class="nav-link"
+                >
+                    Bus Stops
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         ROUTES PAGE
+    ================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             PAGE HERO
+        ================================== -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <div class="page-hero-content">
+
+                    <span class="section-label">
+                        EXPLORE ROUTES
+                    </span>
+
+                    <h1>
+                        Find Your Bus Route
+                    </h1>
+
+                    <p>
+                        Explore available bus routes,
+                        stops, destinations and journey
+                        information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SEARCH
+        ================================== -->
+
+        <section class="routes-search-section">
+
+            <div class="container">
+
+                <div class="routes-search-box">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="routeSearch"
+                        placeholder="Search by route, bus number or destination..."
+                    >
+
+                    <button
+                        id="routeSearchBtn"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="route-filters">
+
+                    <button
+                        class="route-filter active"
+                        data-filter="all"
+                    >
+                        All Routes
+                    </button>
+
+                    <button
+                        class="route-filter"
+                        data-filter="active"
+                    >
+                        Active Now
+                    </button>
+
+                    <button
+                        class="route-filter"
+                        data-filter="city"
+                    >
+                        City Routes
+                    </button>
+
+                    <button
+                        class="route-filter"
+                        data-filter="intercity"
+                    >
+                        Intercity
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             ROUTES LIST
+        ================================== -->
+
+        <section class="routes-section">
+
+            <div class="container">
+
+
+                <div class="section-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            BUS NETWORK
+                        </span>
+
+                        <h2>
+                            Available Routes
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="route-count"
+                        id="routeCount"
+                    >
+                        8 routes
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    class="routes-grid"
+                    id="routesGrid"
+                >
+
+
+                    <!-- =========================
+                         ROUTE 101
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="101"
+                        data-type="intercity"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                101
+                            </div>
+
+                            <span class="route-status active">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Vijayawada
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 12 stops
+                            </span>
+
+                            <span>
+                                🕐 45 min
+                            </span>
+
+                            <span>
+                                📏 32 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>5 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html?bus=101"
+                                class="route-view-btn"
+                            >
+                                Track Bus →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 205
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="205"
+                        data-type="intercity"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                205
+                            </div>
+
+                            <span class="route-status active">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Amaravati
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 10 stops
+                            </span>
+
+                            <span>
+                                🕐 38 min
+                            </span>
+
+                            <span>
+                                📏 26 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>8 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html?bus=205"
+                                class="route-view-btn"
+                            >
+                                Track Bus →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 310
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="310"
+                        data-type="city"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                310
+                            </div>
+
+                            <span class="route-status active">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Tenali
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 15 stops
+                            </span>
+
+                            <span>
+                                🕐 52 min
+                            </span>
+
+                            <span>
+                                📏 36 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>12 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html?bus=310"
+                                class="route-view-btn"
+                            >
+                                Track Bus →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 405
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="405"
+                        data-type="intercity"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                405
+                            </div>
+
+                            <span class="route-status active">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Chilakaluripet
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 14 stops
+                            </span>
+
+                            <span>
+                                🕐 48 min
+                            </span>
+
+                            <span>
+                                📏 34 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>7 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html?bus=405"
+                                class="route-view-btn"
+                            >
+                                Track Bus →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 110
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="110"
+                        data-type="city"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                110
+                            </div>
+
+                            <span class="route-status">
+                                ● Scheduled
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Nallapadu
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 8 stops
+                            </span>
+
+                            <span>
+                                🕐 25 min
+                            </span>
+
+                            <span>
+                                📏 14 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>18 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html?bus=110"
+                                class="route-view-btn"
+                            >
+                                View Route →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 220
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="220"
+                        data-type="city"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                220
+                            </div>
+
+                            <span class="route-status">
+                                ● Scheduled
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Vijayawada
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Mangalagiri
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 11 stops
+                            </span>
+
+                            <span>
+                                🕐 35 min
+                            </span>
+
+                            <span>
+                                📏 21 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>15 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html"
+                                class="route-view-btn"
+                            >
+                                View Route →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 510
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="510"
+                        data-type="intercity"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                510
+                            </div>
+
+                            <span class="route-status active">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Narasaraopet
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 17 stops
+                            </span>
+
+                            <span>
+                                🕐 60 min
+                            </span>
+
+                            <span>
+                                📏 48 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>10 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html"
+                                class="route-view-btn"
+                            >
+                                Track Bus →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         ROUTE 620
+                    ========================== -->
+
+                    <article
+                        class="route-card"
+                        data-route="620"
+                        data-type="city"
+                    >
+
+                        <div class="route-card-header">
+
+                            <div class="route-number">
+                                620
+                            </div>
+
+                            <span class="route-status">
+                                ● Scheduled
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-path">
+
+                            <div class="route-location">
+
+                                <span class="route-dot start"></span>
+
+                                <div>
+
+                                    <small>
+                                        FROM
+                                    </small>
+
+                                    <strong>
+                                        Guntur
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="route-line"></div>
+
+
+                            <div class="route-location">
+
+                                <span class="route-dot end"></span>
+
+                                <div>
+
+                                    <small>
+                                        TO
+                                    </small>
+
+                                    <strong>
+                                        Pedakakani
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="route-details">
+
+                            <span>
+                                🚏 9 stops
+                            </span>
+
+                            <span>
+                                🕐 30 min
+                            </span>
+
+                            <span>
+                                📏 17 km
+                            </span>
+
+                        </div>
+
+
+                        <div class="route-card-footer">
+
+                            <span>
+                                Next bus
+                                <strong>20 min</strong>
+                            </span>
+
+                            <a
+                                href="tracking.html"
+                                class="route-view-btn"
+                            >
+                                View Route →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- No Results -->
+
+                <div
+                    class="no-routes"
+                    id="noRoutes"
+                    style="display: none;"
+                >
+
+                    <div>
+                        🚌
+                    </div>
+
+                    <h3>
+                        No routes found
+                    </h3>
+
+                    <p>
+                        Try another route number
+                        or destination.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             ROUTE INFORMATION
+        ================================== -->
+
+        <section class="route-info-section">
+
+            <div class="container">
+
+
+                <div class="route-info-grid">
+
+
+                    <div class="route-info-card">
+
+                        <div class="route-info-icon">
+                            🚌
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                8+ Routes
+                            </strong>
+
+                            <span>
+                                Across the city
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-info-card">
+
+                        <div class="route-info-icon">
+                            🚏
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                100+ Stops
+                            </strong>
+
+                            <span>
+                                Easy access
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-info-card">
+
+                        <div class="route-info-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Live Tracking
+                            </strong>
+
+                            <span>
+                                Real-time buses
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="route-info-card">
+
+                        <div class="route-info-icon">
+                            ⏱️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Live ETA
+                            </strong>
+
+                            <span>
+                                Plan your journey
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer class="footer">
+
+            <div class="container footer-container">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="logo"
+                    >
+                        🚌 Bus<span class="logo-highlight">
+                            Track
+                        </span>
+                    </a>
+
+                    <p>
+                        Smart transportation for
+                        smarter journeys.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Platform
+                        </h4>
+
+                        <a href="tracking.html">
+                            Live Tracking
+                        </a>
+
+                        <a href="routes.html">
+                            Routes
+                        </a>
+
+                        <a href="stops.html">
+                            Bus Stops
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Account
+                        </h4>
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                        <a href="register.html">
+                            Register
+                        </a>
+
+                        <a href="profile.html">
+                            Profile
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Company
+                        </h4>
+
+                        <a href="#">
+                            About Us
+                        </a>
+
+                        <a href="#">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Privacy
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <p>
+                        © 2026 BusTrack.
+                        All rights reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="../js/app.js"></script>
+
+    <script src="../js/routes.js"></script>
+
+
+</body>
+
+</html>

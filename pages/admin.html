@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="BusTrack administration dashboard"
+    >
+
+    <title>Admin Dashboard - BusTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/admin.css"
+    >
+
+</head>
+
+
+<body class="admin-page">
+
+
+    <!-- =================================
+         ADMIN NAVBAR
+    ================================== -->
+
+    <header class="navbar admin-navbar">
+
+        <div class="container navbar-container">
+
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🚌
+                </span>
+
+                <span>
+                    Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </span>
+
+            </a>
+
+
+            <div class="admin-title">
+
+                <span>
+                    ADMIN
+                </span>
+
+                <strong>
+                    Dashboard
+                </strong>
+
+            </div>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="profile.html"
+                    class="login-btn"
+                >
+                    My Profile
+                </a>
+
+            </div>
+
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             ADMIN HERO
+        ================================== -->
+
+        <section class="admin-hero">
+
+            <div class="container">
+
+                <div class="admin-hero-content">
+
+                    <div>
+
+                        <span class="section-label">
+                            CONTROL CENTER
+                        </span>
+
+                        <h1>
+                            BusTrack Admin
+                        </h1>
+
+                        <p>
+                            Monitor buses, routes and
+                            passenger activity from one
+                            dashboard.
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-status">
+
+                        <span class="status-dot">
+                            ●
+                        </span>
+
+                        <span>
+                            System Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             DASHBOARD
+        ================================== -->
+
+        <section class="admin-section">
+
+            <div class="container">
+
+
+                <!-- =================================
+                     STATISTICS
+                ================================== -->
+
+                <div class="admin-stats">
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon blue">
+                            🚌
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Buses
+                            </span>
+
+                            <strong id="totalBuses">
+                                48
+                            </strong>
+
+                            <small>
+                                Registered buses
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon green">
+                            🟢
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Active Buses
+                            </span>
+
+                            <strong id="activeBuses">
+                                36
+                            </strong>
+
+                            <small>
+                                Currently operating
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon orange">
+                            🛣️
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong id="totalRoutes">
+                                24
+                            </strong>
+
+                            <small>
+                                Active routes
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon purple">
+                            👥
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Users
+                            </span>
+
+                            <strong id="totalUsers">
+                                1,248
+                            </strong>
+
+                            <small>
+                                Registered passengers
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     QUICK ACTIONS
+                ================================== -->
+
+                <div class="admin-card">
+
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                MANAGEMENT
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-actions">
+
+
+                        <button
+                            class="admin-action"
+                            id="addBusBtn"
+                        >
+
+                            <span class="admin-action-icon">
+                                ➕
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Add Bus
+                                </strong>
+
+                                <small>
+                                    Register a new bus
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="admin-action"
+                            id="addRouteBtn"
+                        >
+
+                            <span class="admin-action-icon">
+                                🛣️
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Add Route
+                                </strong>
+
+                                <small>
+                                    Create a bus route
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="admin-action"
+                            id="addStopBtn"
+                        >
+
+                            <span class="admin-action-icon">
+                                🚏
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Add Stop
+                                </strong>
+
+                                <small>
+                                    Add a bus stop
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="admin-action"
+                            id="refreshDataBtn"
+                        >
+
+                            <span class="admin-action-icon">
+                                🔄
+                            </span>
+
+                            <span>
+
+                                <strong>
+                                    Refresh Data
+                                </strong>
+
+                                <small>
+                                    Update dashboard
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     BUS MANAGEMENT
+                ================================== -->
+
+                <div class="admin-card">
+
+
+                    <div class="admin-card-header">
+
+
+                        <div>
+
+                            <span class="section-label">
+                                FLEET
+                            </span>
+
+                            <h2>
+                                Bus Management
+                            </h2>
+
+                        </div>
+
+
+                        <div class="admin-header-actions">
+
+                            <div class="admin-search">
+
+                                <span>
+                                    🔍
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="busSearch"
+                                    placeholder="Search buses..."
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Bus
+                                    </th>
+
+                                    <th>
+                                        Route
+                                    </th>
+
+                                    <th>
+                                        Driver
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Speed
+                                    </th>
+
+                                    <th>
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="busTableBody">
+
+
+                                <tr data-bus="BT-101">
+
+                                    <td>
+
+                                        <div class="table-bus">
+
+                                            <span class="table-bus-icon">
+                                                🚌
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    BT-101
+                                                </strong>
+
+                                                <small>
+                                                    AP 07 AB 101
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Route 101
+                                    </td>
+
+
+                                    <td>
+                                        Ramesh
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        38 km/h
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="table-btn track"
+                                            data-bus-id="101"
+                                        >
+                                            Track
+                                        </button>
+
+                                        <button
+                                            class="table-btn edit"
+                                            data-bus-id="101"
+                                        >
+                                            Edit
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-bus="BT-205">
+
+                                    <td>
+
+                                        <div class="table-bus">
+
+                                            <span class="table-bus-icon">
+                                                🚌
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    BT-205
+                                                </strong>
+
+                                                <small>
+                                                    AP 07 CD 205
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Route 205
+                                    </td>
+
+
+                                    <td>
+                                        Suresh
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        42 km/h
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="table-btn track"
+                                            data-bus-id="205"
+                                        >
+                                            Track
+                                        </button>
+
+                                        <button
+                                            class="table-btn edit"
+                                            data-bus-id="205"
+                                        >
+                                            Edit
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-bus="BT-310">
+
+                                    <td>
+
+                                        <div class="table-bus">
+
+                                            <span class="table-bus-icon">
+                                                🚌
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    BT-310
+                                                </strong>
+
+                                                <small>
+                                                    AP 07 EF 310
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Route 310
+                                    </td>
+
+
+                                    <td>
+                                        Prasad
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="table-status active">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        31 km/h
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="table-btn track"
+                                            data-bus-id="310"
+                                        >
+                                            Track
+                                        </button>
+
+                                        <button
+                                            class="table-btn edit"
+                                            data-bus-id="310"
+                                        >
+                                            Edit
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-bus="BT-405">
+
+                                    <td>
+
+                                        <div class="table-bus">
+
+                                            <span class="table-bus-icon">
+                                                🚌
+                                            </span>
+
+                                            <div>
+
+                                                <strong>
+                                                    BT-405
+                                                </strong>
+
+                                                <small>
+                                                    AP 07 GH 405
+                                                </small>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Route 405
+                                    </td>
+
+
+                                    <td>
+                                        Kumar
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="table-status inactive">
+                                            Offline
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        0 km/h
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="table-btn track"
+                                            data-bus-id="405"
+                                        >
+                                            Track
+                                        </button>
+
+                                        <button
+                                            class="table-btn edit"
+                                            data-bus-id="405"
+                                        >
+                                            Edit
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     ROUTES + SYSTEM STATUS
+                ================================== -->
+
+                <div class="admin-two-column">
+
+
+                    <!-- ROUTES -->
+
+                    <div class="admin-card">
+
+
+                        <div class="admin-card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    ROUTES
+                                </span>
+
+                                <h2>
+                                    Route Overview
+                                </h2>
+
+                            </div>
+
+                            <a
+                                href="routes.html"
+                                class="admin-view-link"
+                            >
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <div class="route-overview">
+
+
+                            <div class="route-overview-item">
+
+                                <div>
+
+                                    <strong>
+                                        101
+                                    </strong>
+
+                                    <span>
+                                        Guntur → Vijayawada
+                                    </span>
+
+                                </div>
+
+                                <span class="route-badge active">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="route-overview-item">
+
+                                <div>
+
+                                    <strong>
+                                        205
+                                    </strong>
+
+                                    <span>
+                                        Guntur → Amaravati
+                                    </span>
+
+                                </div>
+
+                                <span class="route-badge active">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="route-overview-item">
+
+                                <div>
+
+                                    <strong>
+                                        310
+                                    </strong>
+
+                                    <span>
+                                        Guntur → Tenali
+                                    </span>
+
+                                </div>
+
+                                <span class="route-badge active">
+                                    Active
+                                </span>
+
+                            </div>
+
+
+                            <div class="route-overview-item">
+
+                                <div>
+
+                                    <strong>
+                                        405
+                                    </strong>
+
+                                    <span>
+                                        Guntur → Narasaraopet
+                                    </span>
+
+                                </div>
+
+                                <span class="route-badge">
+                                    Scheduled
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- SYSTEM STATUS -->
+
+                    <div class="admin-card">
+
+
+                        <div class="admin-card-header">
+
+                            <div>
+
+                                <span class="section-label">
+                                    SYSTEM
+                                </span>
+
+                                <h2>
+                                    System Status
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="system-status-list">
+
+
+                            <div class="system-status-item">
+
+                                <div>
+
+                                    <span class="system-icon green">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Tracking Service
+                                        </strong>
+
+                                        <small>
+                                            Real-time tracking
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="online">
+                                    Online
+                                </span>
+
+                            </div>
+
+
+                            <div class="system-status-item">
+
+                                <div>
+
+                                    <span class="system-icon green">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Database
+                                        </strong>
+
+                                        <small>
+                                            Data storage
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="online">
+                                    Online
+                                </span>
+
+                            </div>
+
+
+                            <div class="system-status-item">
+
+                                <div>
+
+                                    <span class="system-icon green">
+                                        ✓
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            GPS Service
+                                        </strong>
+
+                                        <small>
+                                            Location service
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="online">
+                                    Online
+                                </span>
+
+                            </div>
+
+
+                            <div class="system-status-item">
+
+                                <div>
+
+                                    <span class="system-icon orange">
+                                        !
+                                    </span>
+
+                                    <div>
+
+                                        <strong>
+                                            Notifications
+                                        </strong>
+
+                                        <small>
+                                            Push notification service
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="warning">
+                                    Limited
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     RECENT ACTIVITY
+                ================================== -->
+
+                <div class="admin-card">
+
+
+                    <div class="admin-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                ACTIVITY
+                            </span>
+
+                            <h2>
+                                Recent Activity
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon green">
+                                🚌
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Bus BT-101 started trip
+                                </strong>
+
+                                <span>
+                                    Route 101 · 5 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon blue">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New passenger registered
+                                </strong>
+
+                                <span>
+                                    demo@example.com · 12 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon orange">
+                                🛣️
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Route 205 updated
+                                </strong>
+
+                                <span>
+                                    Stop information changed · 25 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon purple">
+                                🚏
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New stop added
+                                </strong>
+
+                                <span>
+                                    Mangalagiri Centre · 1 hour ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo"
+                >
+                    🚌 Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </a>
+
+                <p>
+                    Smart transportation for
+                    smarter journeys.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="tracking.html">
+                        Live Tracking
+                    </a>
+
+                    <a href="routes.html">
+                        Routes
+                    </a>
+
+                    <a href="stops.html">
+                        Bus Stops
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Account
+                    </h4>
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                    <a href="profile.html">
+                        Profile
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Admin
+                    </h4>
+
+                    <a href="admin.html">
+                        Dashboard
+                    </a>
+
+                    <a href="#">
+                        Settings
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 BusTrack.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="../js/app.js"></script>
+
+    <script src="../js/admin.js"></script>
+
+
+</body>
+
+</html>

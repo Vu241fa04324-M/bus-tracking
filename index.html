@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="BusTrack - Smart Bus Tracking System"
+    >
+
+    <title>BusTrack - Smart Bus Tracking System</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Responsive CSS -->
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         NAVBAR
+    =============================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🚌
+                </span>
+
+                <span>
+                    Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-menu">
+
+                <a
+                    href="index.html"
+                    class="nav-link active"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="pages/tracking.html"
+                    class="nav-link"
+                >
+                    Live Tracking
+                </a>
+
+                <a
+                    href="pages/routes.html"
+                    class="nav-link"
+                >
+                    Routes
+                </a>
+
+                <a
+                    href="pages/stops.html"
+                    class="nav-link"
+                >
+                    Bus Stops
+                </a>
+
+            </nav>
+
+
+            <!-- Right Side -->
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+
+                <a
+                    href="pages/login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==============================
+         HERO SECTION
+    =============================== -->
+
+    <main>
+
+
+        <section class="hero">
+
+            <div class="container hero-container">
+
+
+                <!-- Hero Content -->
+
+                <div class="hero-content">
+
+
+                    <div class="hero-badge">
+
+                        <span class="live-dot"></span>
+
+                        LIVE BUS TRACKING
+
+                    </div>
+
+
+                    <h1>
+
+                        Track Your Bus.
+
+                        <span>
+                            Travel Smarter.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Find your bus, check live locations,
+                        explore routes and know exactly when
+                        your bus will arrive.
+
+                    </p>
+
+
+                    <!-- Search -->
+
+                    <div class="hero-search">
+
+                        <input
+                            type="text"
+                            id="busSearch"
+                            placeholder="Search bus number or route..."
+                        >
+
+                        <button
+                            id="searchBtn"
+                            class="search-btn"
+                        >
+
+                            🔍
+
+                            <span>
+                                Search Bus
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- Quick Actions -->
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="pages/tracking.html"
+                            class="primary-btn"
+                        >
+
+                            📍 Track a Bus
+
+                        </a>
+
+
+                        <a
+                            href="pages/routes.html"
+                            class="secondary-btn"
+                        >
+
+                            🛣️ Explore Routes
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- Hero Visual -->
+
+                <div class="hero-visual">
+
+
+                    <div class="map-card">
+
+
+                        <div class="map-header">
+
+                            <div>
+
+                                <span class="map-status-dot"></span>
+
+                                <strong>
+                                    Live Buses
+                                </strong>
+
+                            </div>
+
+                            <span class="map-live">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <!-- Fake Map -->
+
+                        <div class="map-preview">
+
+
+                            <div class="road road-1"></div>
+
+                            <div class="road road-2"></div>
+
+                            <div class="road road-3"></div>
+
+
+                            <div class="map-location location-1">
+
+                                <span>📍</span>
+
+                            </div>
+
+
+                            <div class="map-location location-2">
+
+                                <span>📍</span>
+
+                            </div>
+
+
+                            <div class="bus-marker bus-marker-1">
+
+                                🚌
+
+                            </div>
+
+
+                            <div class="bus-marker bus-marker-2">
+
+                                🚌
+
+                            </div>
+
+
+                            <div class="map-stop stop-1"></div>
+
+                            <div class="map-stop stop-2"></div>
+
+                            <div class="map-stop stop-3"></div>
+
+
+                        </div>
+
+
+                        <!-- Bus info -->
+
+                        <div class="map-bus-info">
+
+
+                            <div class="bus-mini-icon">
+                                🚌
+                            </div>
+
+
+                            <div class="bus-mini-details">
+
+                                <strong>
+                                    Bus 101
+                                </strong>
+
+                                <span>
+                                    Guntur → Vijayawada
+                                </span>
+
+                            </div>
+
+
+                            <div class="bus-eta">
+
+                                <strong>
+                                    5 min
+                                </strong>
+
+                                <span>
+                                    ETA
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             STATISTICS
+        =============================== -->
+
+        <section class="stats-section">
+
+            <div class="container stats-grid">
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        🚌
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            120+
+                        </h2>
+
+                        <p>
+                            Active Buses
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            45
+                        </h2>
+
+                        <p>
+                            Routes
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🚏
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            320+
+                        </h2>
+
+                        <p>
+                            Bus Stops
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            25K+
+                        </h2>
+
+                        <p>
+                            Daily Passengers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             FEATURES
+        =============================== -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        WHY BUS TRACK?
+                    </span>
+
+                    <h2>
+                        Everything you need
+                        for a better journey.
+                    </h2>
+
+                    <p>
+                        One simple platform to help you
+                        plan, track and manage your bus journey.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon blue">
+                            📍
+                        </div>
+
+                        <h3>
+                            Live Bus Tracking
+                        </h3>
+
+                        <p>
+                            See where your bus is right now
+                            and follow its journey in real time.
+                        </p>
+
+                        <a href="pages/tracking.html">
+                            Track Bus →
+                        </a>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon green">
+                            🛣️
+                        </div>
+
+                        <h3>
+                            Explore Routes
+                        </h3>
+
+                        <p>
+                            Find routes, destinations and
+                            all stops along your journey.
+                        </p>
+
+                        <a href="pages/routes.html">
+                            View Routes →
+                        </a>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon orange">
+                            ⏱️
+                        </div>
+
+                        <h3>
+                            Accurate ETA
+                        </h3>
+
+                        <p>
+                            Get estimated arrival times so
+                            you don't have to wait unnecessarily.
+                        </p>
+
+                        <a href="pages/tracking.html">
+                            Check ETA →
+                        </a>
+
+                    </div>
+
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon purple">
+                            🚏
+                        </div>
+
+                        <h3>
+                            Find Bus Stops
+                        </h3>
+
+                        <p>
+                            Search nearby bus stops and
+                            discover available services.
+                        </p>
+
+                        <a href="pages/stops.html">
+                            Find Stops →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             POPULAR ROUTES
+        =============================== -->
+
+        <section class="routes-section">
+
+            <div class="container">
+
+
+                <div class="section-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            POPULAR ROUTES
+                        </span>
+
+                        <h2>
+                            Where do you want to go?
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="pages/routes.html"
+                        class="view-all"
+                    >
+                        View All Routes →
+                    </a>
+
+                </div>
+
+
+                <div class="route-cards">
+
+
+                    <!-- Route 1 -->
+
+                    <div class="route-card">
+
+                        <div class="route-number">
+                            101
+                        </div>
+
+
+                        <div class="route-content">
+
+                            <h3>
+                                Guntur → Vijayawada
+                            </h3>
+
+                            <p>
+                                Guntur • Mangalagiri •
+                                Vijayawada
+                            </p>
+
+
+                            <div class="route-meta">
+
+                                <span>
+                                    🕐 1h 20m
+                                </span>
+
+                                <span>
+                                    🚌 12 Buses
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="pages/routes.html"
+                            class="route-arrow"
+                        >
+                            →
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Route 2 -->
+
+                    <div class="route-card">
+
+                        <div class="route-number">
+                            205
+                        </div>
+
+
+                        <div class="route-content">
+
+                            <h3>
+                                Guntur → Amaravati
+                            </h3>
+
+                            <p>
+                                Guntur • Pedakakani •
+                                Amaravati
+                            </p>
+
+
+                            <div class="route-meta">
+
+                                <span>
+                                    🕐 55m
+                                </span>
+
+                                <span>
+                                    🚌 8 Buses
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="pages/routes.html"
+                            class="route-arrow"
+                        >
+                            →
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Route 3 -->
+
+                    <div class="route-card">
+
+                        <div class="route-number">
+                            310
+                        </div>
+
+
+                        <div class="route-content">
+
+                            <h3>
+                                Guntur → Tenali
+                            </h3>
+
+                            <p>
+                                Guntur • Namburu • Tenali
+                            </p>
+
+
+                            <div class="route-meta">
+
+                                <span>
+                                    🕐 45m
+                                </span>
+
+                                <span>
+                                    🚌 10 Buses
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="pages/routes.html"
+                            class="route-arrow"
+                        >
+                            →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==============================
+             CTA
+        =============================== -->
+
+        <section class="cta-section">
+
+            <div class="container cta-container">
+
+
+                <div>
+
+                    <span class="section-label">
+                        START YOUR JOURNEY
+                    </span>
+
+                    <h2>
+                        Never miss your bus again.
+                    </h2>
+
+                    <p>
+                        Track buses, discover routes and
+                        plan your journey with BusTrack.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="pages/tracking.html"
+                    class="cta-btn"
+                >
+
+                    Start Tracking →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="logo"
+                >
+
+                    🚌 Bus<span class="logo-highlight">
+                        Track
+                    </span>
+
+                </a>
+
+                <p>
+                    Smart transportation for
+                    smarter journeys.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="pages/tracking.html">
+                        Live Tracking
+                    </a>
+
+                    <a href="pages/routes.html">
+                        Routes
+                    </a>
+
+                    <a href="pages/stops.html">
+                        Bus Stops
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Account
+                    </h4>
+
+                    <a href="pages/login.html">
+                        Login
+                    </a>
+
+                    <a href="pages/register.html">
+                        Register
+                    </a>
+
+                    <a href="pages/profile.html">
+                        Profile
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="#">
+                        About Us
+                    </a>
+
+                    <a href="#">
+                        Contact
+                    </a>
+
+                    <a href="#">
+                        Privacy
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © 2026 BusTrack. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

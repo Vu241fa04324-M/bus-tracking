@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="BusTrack live bus tracking"
+    >
+
+    <title>Live Bus Tracking - BusTrack</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Responsive CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <!-- Tracking CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/tracking.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+
+            <!-- Logo -->
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🚌
+                </span>
+
+                <span>
+                    Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </span>
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav-menu">
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="tracking.html"
+                    class="nav-link active"
+                >
+                    Live Tracking
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="nav-link"
+                >
+                    Routes
+                </a>
+
+                <a
+                    href="stops.html"
+                    class="nav-link"
+                >
+                    Bus Stops
+                </a>
+
+            </nav>
+
+
+            <!-- Actions -->
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         TRACKING PAGE
+    ================================== -->
+
+    <main class="tracking-page">
+
+
+        <!-- =================================
+             PAGE HEADER
+        ================================== -->
+
+        <section class="tracking-header">
+
+            <div class="container">
+
+                <div class="tracking-title-row">
+
+
+                    <div>
+
+                        <div class="live-status">
+
+                            <span class="live-status-dot"></span>
+
+                            LIVE TRACKING
+
+                        </div>
+
+
+                        <h1>
+                            Track Your Bus
+                        </h1>
+
+
+                        <p>
+                            Find your bus location and
+                            estimated arrival time in real time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="last-updated">
+
+                        <span>
+                            Last updated
+                        </span>
+
+                        <strong id="lastUpdated">
+                            Just now
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SEARCH SECTION
+        ================================== -->
+
+        <section class="tracking-search-section">
+
+            <div class="container">
+
+
+                <div class="tracking-search">
+
+
+                    <div class="tracking-search-input">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="trackingSearch"
+                            placeholder="Search bus number, route or destination..."
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="tracking-search-btn"
+                        id="trackingSearchBtn"
+                    >
+                        Search
+                    </button>
+
+
+                </div>
+
+
+                <!-- Quick Filters -->
+
+                <div class="quick-filters">
+
+                    <span>
+                        Popular:
+                    </span>
+
+                    <button
+                        class="filter-btn active"
+                        data-bus="101"
+                    >
+                        Bus 101
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-bus="205"
+                    >
+                        Bus 205
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-bus="310"
+                    >
+                        Bus 310
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-bus="405"
+                    >
+                        Bus 405
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MAIN TRACKING AREA
+        ================================== -->
+
+        <section class="tracking-main">
+
+            <div class="container tracking-grid">
+
+
+                <!-- =================================
+                     MAP
+                ================================== -->
+
+                <div class="live-map-card">
+
+
+                    <div class="map-card-header">
+
+                        <div>
+
+                            <h2>
+                                Live Bus Map
+                            </h2>
+
+                            <span>
+                                Showing active buses
+                            </span>
+
+                        </div>
+
+
+                        <div class="map-controls">
+
+                            <button
+                                id="zoomIn"
+                                title="Zoom in"
+                            >
+                                +
+                            </button>
+
+                            <button
+                                id="zoomOut"
+                                title="Zoom out"
+                            >
+                                −
+                            </button>
+
+                            <button
+                                id="locateMe"
+                                title="My location"
+                            >
+                                📍
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MAP -->
+
+                    <div
+                        class="tracking-map"
+                        id="trackingMap"
+                    >
+
+
+                        <!-- Roads -->
+
+                        <div class="map-road map-road-1"></div>
+
+                        <div class="map-road map-road-2"></div>
+
+                        <div class="map-road map-road-3"></div>
+
+                        <div class="map-road map-road-4"></div>
+
+
+                        <!-- Water -->
+
+                        <div class="map-water"></div>
+
+
+                        <!-- Area labels -->
+
+                        <span class="map-area area-1">
+                            Guntur
+                        </span>
+
+                        <span class="map-area area-2">
+                            Mangalagiri
+                        </span>
+
+                        <span class="map-area area-3">
+                            Vijayawada
+                        </span>
+
+
+                        <!-- Bus Stops -->
+
+                        <div
+                            class="tracking-stop stop-a"
+                            title="Guntur Bus Stand"
+                        >
+                            🚏
+                        </div>
+
+                        <div
+                            class="tracking-stop stop-b"
+                            title="Lakshmipuram"
+                        >
+                            🚏
+                        </div>
+
+                        <div
+                            class="tracking-stop stop-c"
+                            title="Mangalagiri"
+                        >
+                            🚏
+                        </div>
+
+                        <div
+                            class="tracking-stop stop-d"
+                            title="Vijayawada"
+                        >
+                            🚏
+                        </div>
+
+
+                        <!-- Bus 101 -->
+
+                        <button
+                            class="tracking-bus bus-101"
+                            data-bus="101"
+                            title="Bus 101"
+                        >
+                            🚌
+
+                            <span class="bus-map-label">
+                                101
+                            </span>
+
+                        </button>
+
+
+                        <!-- Bus 205 -->
+
+                        <button
+                            class="tracking-bus bus-205"
+                            data-bus="205"
+                            title="Bus 205"
+                        >
+                            🚌
+
+                            <span class="bus-map-label">
+                                205
+                            </span>
+
+                        </button>
+
+
+                        <!-- Bus 310 -->
+
+                        <button
+                            class="tracking-bus bus-310"
+                            data-bus="310"
+                            title="Bus 310"
+                        >
+                            🚌
+
+                            <span class="bus-map-label">
+                                310
+                            </span>
+
+                        </button>
+
+
+                        <!-- Bus 405 -->
+
+                        <button
+                            class="tracking-bus bus-405"
+                            data-bus="405"
+                            title="Bus 405"
+                        >
+                            🚌
+
+                            <span class="bus-map-label">
+                                405
+                            </span>
+
+                        </button>
+
+
+                        <!-- User Location -->
+
+                        <div
+                            class="user-location"
+                            id="userLocation"
+                        >
+                            <span></span>
+                        </div>
+
+
+                        <!-- Map Zoom -->
+
+                        <div
+                            class="map-zoom-level"
+                            id="mapZoomLevel"
+                        >
+                            100%
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Map Legend -->
+
+                    <div class="map-legend">
+
+                        <div>
+
+                            <span class="legend-bus">
+                                🚌
+                            </span>
+
+                            Active Bus
+
+                        </div>
+
+                        <div>
+
+                            <span class="legend-stop"></span>
+
+                            Bus Stop
+
+                        </div>
+
+                        <div>
+
+                            <span class="legend-user"></span>
+
+                            Your Location
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     BUS DETAILS
+                ================================== -->
+
+                <aside class="bus-details-panel">
+
+
+                    <!-- Selected Bus -->
+
+                    <div class="selected-bus-card">
+
+
+                        <div class="selected-bus-top">
+
+                            <div class="selected-bus-number">
+
+                                <span>
+                                    BUS
+                                </span>
+
+                                <strong id="selectedBusNumber">
+                                    101
+                                </strong>
+
+                            </div>
+
+
+                            <div class="bus-live-badge">
+
+                                <span></span>
+
+                                LIVE
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="selected-route">
+
+                            <span id="selectedStart">
+                                Guntur
+                            </span>
+
+                            <span class="route-line">
+                                ─────────→
+                            </span>
+
+                            <span id="selectedDestination">
+                                Vijayawada
+                            </span>
+
+                        </div>
+
+
+                        <div class="bus-driver">
+
+                            <div class="driver-avatar">
+                                👨‍✈️
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Driver: Rajesh Kumar
+                                </strong>
+
+                                <span>
+                                    On duty
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ETA -->
+
+                    <div class="eta-card">
+
+
+                        <div class="eta-main">
+
+                            <span>
+                                Estimated Arrival
+                            </span>
+
+                            <strong id="etaTime">
+                                5 min
+                            </strong>
+
+                        </div>
+
+
+                        <div class="eta-progress">
+
+                            <div
+                                class="eta-progress-bar"
+                                id="etaProgress"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="eta-info">
+
+                            <span>
+                                Next stop
+                            </span>
+
+                            <strong id="nextStop">
+                                Lakshmipuram
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Journey Information -->
+
+                    <div class="journey-card">
+
+                        <h3>
+                            Journey Information
+                        </h3>
+
+
+                        <div class="journey-row">
+
+                            <div class="journey-icon blue">
+                                📍
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Current Location
+                                </span>
+
+                                <strong id="currentLocation">
+                                    Guntur Bus Stand
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-row">
+
+                            <div class="journey-icon green">
+                                🚏
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Next Stop
+                                </span>
+
+                                <strong>
+                                    Lakshmipuram
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-row">
+
+                            <div class="journey-icon orange">
+                                🛣️
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Distance Remaining
+                                </span>
+
+                                <strong id="distanceRemaining">
+                                    18.5 km
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-row">
+
+                            <div class="journey-icon purple">
+                                ⏱️
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Estimated Duration
+                                </span>
+
+                                <strong id="duration">
+                                    28 min
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Upcoming Stops -->
+
+                    <div class="upcoming-card">
+
+                        <div class="upcoming-header">
+
+                            <h3>
+                                Upcoming Stops
+                            </h3>
+
+                            <span>
+                                4 stops
+                            </span>
+
+                        </div>
+
+
+                        <div class="stop-list">
+
+
+                            <div class="timeline-stop active">
+
+                                <span class="timeline-dot"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Guntur Bus Stand
+                                    </strong>
+
+                                    <span>
+                                        Current location
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    Now
+                                </time>
+
+                            </div>
+
+
+                            <div class="timeline-stop">
+
+                                <span class="timeline-dot"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Lakshmipuram
+                                    </strong>
+
+                                    <span>
+                                        Next stop
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    5 min
+                                </time>
+
+                            </div>
+
+
+                            <div class="timeline-stop">
+
+                                <span class="timeline-dot"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Mangalagiri
+                                    </strong>
+
+                                    <span>
+                                        Bus stop
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    18 min
+                                </time>
+
+                            </div>
+
+
+                            <div class="timeline-stop">
+
+                                <span class="timeline-dot"></span>
+
+                                <div>
+
+                                    <strong>
+                                        Vijayawada
+                                    </strong>
+
+                                    <span>
+                                        Final destination
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    28 min
+                                </time>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             ALL ACTIVE BUSES
+        ================================== -->
+
+        <section class="active-buses-section">
+
+            <div class="container">
+
+
+                <div class="section-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            LIVE NOW
+                        </span>
+
+                        <h2>
+                            Active Buses
+                        </h2>
+
+                    </div>
+
+                    <span class="active-count">
+                        <span></span>
+                        4 buses active
+                    </span>
+
+                </div>
+
+
+                <div class="active-buses-grid">
+
+
+                    <!-- Bus 101 -->
+
+                    <button
+                        class="active-bus-card selected"
+                        data-bus="101"
+                    >
+
+                        <div class="active-bus-header">
+
+                            <div class="active-bus-number">
+                                101
+                            </div>
+
+                            <span class="active-badge">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Guntur → Vijayawada
+                        </h3>
+
+
+                        <div class="active-bus-info">
+
+                            <span>
+                                📍 Lakshmipuram
+                            </span>
+
+                            <strong>
+                                5 min
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- Bus 205 -->
+
+                    <button
+                        class="active-bus-card"
+                        data-bus="205"
+                    >
+
+                        <div class="active-bus-header">
+
+                            <div class="active-bus-number">
+                                205
+                            </div>
+
+                            <span class="active-badge">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Guntur → Amaravati
+                        </h3>
+
+
+                        <div class="active-bus-info">
+
+                            <span>
+                                📍 Pedakakani
+                            </span>
+
+                            <strong>
+                                8 min
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- Bus 310 -->
+
+                    <button
+                        class="active-bus-card"
+                        data-bus="310"
+                    >
+
+                        <div class="active-bus-header">
+
+                            <div class="active-bus-number">
+                                310
+                            </div>
+
+                            <span class="active-badge">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Guntur → Tenali
+                        </h3>
+
+
+                        <div class="active-bus-info">
+
+                            <span>
+                                📍 Namburu
+                            </span>
+
+                            <strong>
+                                12 min
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- Bus 405 -->
+
+                    <button
+                        class="active-bus-card"
+                        data-bus="405"
+                    >
+
+                        <div class="active-bus-header">
+
+                            <div class="active-bus-number">
+                                405
+                            </div>
+
+                            <span class="active-badge">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Guntur → Chilakaluripet
+                        </h3>
+
+
+                        <div class="active-bus-info">
+
+                            <span>
+                                📍 Nallapadu
+                            </span>
+
+                            <strong>
+                                7 min
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer class="footer">
+
+            <div class="container footer-container">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="logo"
+                    >
+
+                        🚌 Bus<span class="logo-highlight">
+                            Track
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Smart transportation for
+                        smarter journeys.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <div>
+
+                        <h4>
+                            Platform
+                        </h4>
+
+                        <a href="tracking.html">
+                            Live Tracking
+                        </a>
+
+                        <a href="routes.html">
+                            Routes
+                        </a>
+
+                        <a href="stops.html">
+                            Bus Stops
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Account
+                        </h4>
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                        <a href="register.html">
+                            Register
+                        </a>
+
+                        <a href="profile.html">
+                            Profile
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Company
+                        </h4>
+
+                        <a href="#">
+                            About Us
+                        </a>
+
+                        <a href="#">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Privacy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <p>
+                        © 2026 BusTrack. All rights reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="../js/app.js"></script>
+
+    <script src="../js/tracking.js"></script>
+
+    <script src="../js/map.js"></script>
+
+
+</body>
+
+</html>

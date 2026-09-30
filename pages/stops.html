@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Find bus stops and upcoming buses"
+    >
+
+    <title>Bus Stops - BusTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    🚌
+                </span>
+
+                <span>
+                    Bus<span class="logo-highlight">
+                        Track
+                    </span>
+                </span>
+
+            </a>
+
+
+            <nav class="nav-menu">
+
+                <a
+                    href="../index.html"
+                    class="nav-link"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="tracking.html"
+                    class="nav-link"
+                >
+                    Live Tracking
+                </a>
+
+                <a
+                    href="routes.html"
+                    class="nav-link"
+                >
+                    Routes
+                </a>
+
+                <a
+                    href="stops.html"
+                    class="nav-link active"
+                >
+                    Bus Stops
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="login.html"
+                    class="login-btn"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             PAGE HERO
+        ================================== -->
+
+        <section class="page-hero">
+
+            <div class="container">
+
+                <div class="page-hero-content">
+
+                    <span class="section-label">
+                        FIND YOUR STOP
+                    </span>
+
+                    <h1>
+                        Bus Stops
+                    </h1>
+
+                    <p>
+                        Find nearby bus stops and
+                        see upcoming buses in real time.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             SEARCH SECTION
+        ================================== -->
+
+        <section class="stops-search-section">
+
+            <div class="container">
+
+
+                <div class="stops-search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="stopSearch"
+                        placeholder="Search for a bus stop..."
+                    >
+
+                    <button
+                        id="stopSearchBtn"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+
+                <div class="stops-actions">
+
+                    <button
+                        class="location-btn"
+                        id="findNearbyStops"
+                    >
+                        📍 Find Stops Near Me
+                    </button>
+
+
+                    <span
+                        class="stops-count"
+                        id="stopsCount"
+                    >
+                        10 stops
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             STOPS CONTENT
+        ================================== -->
+
+        <section class="stops-section">
+
+            <div class="container">
+
+
+                <div class="section-top">
+
+                    <div>
+
+                        <span class="section-label">
+                            BUS NETWORK
+                        </span>
+
+                        <h2>
+                            Available Stops
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div
+                    class="stops-grid"
+                    id="stopsGrid"
+                >
+
+
+                    <!-- =========================
+                         STOP 1
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="guntur bus stand"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Guntur Bus Stand
+                        </h3>
+
+                        <p class="stop-address">
+                            Main Bus Station, Guntur
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                101 · 110 · 310 · 405
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 101
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                5 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=101"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 2
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="lakshmipuram"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Lakshmipuram
+                        </h3>
+
+                        <p class="stop-address">
+                            Lakshmipuram Main Road
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                101 · 205 · 310
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 205
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                8 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=205"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 3
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="pedakakani"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Pedakakani
+                        </h3>
+
+                        <p class="stop-address">
+                            Pedakakani Junction
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                205 · 620
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 205
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                6 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=205"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 4
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="amaravati road"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Amaravati Road
+                        </h3>
+
+                        <p class="stop-address">
+                            Amaravati Main Road
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                205 · 220
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 205
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                8 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=205"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 5
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="namburu"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Namburu
+                        </h3>
+
+                        <p class="stop-address">
+                            Namburu Railway Road
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                310 · 620
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 310
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                12 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=310"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 6
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="nallapadu"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Nallapadu
+                        </h3>
+
+                        <p class="stop-address">
+                            Nallapadu Junction
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                110 · 405 · 510
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 405
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                7 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=405"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 7
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="tenali"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Tenali
+                        </h3>
+
+                        <p class="stop-address">
+                            Tenali Main Bus Stop
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                310 · 510
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 310
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                14 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=310"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 8
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="vijayawada bus stand"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Vijayawada Bus Stand
+                        </h3>
+
+                        <p class="stop-address">
+                            Pandit Nehru Bus Station
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                101 · 220
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 101
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                5 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html?bus=101"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 9
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="mangalagiri"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Scheduled
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Mangalagiri
+                        </h3>
+
+                        <p class="stop-address">
+                            Mangalagiri Centre
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                220 · 405
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 220
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                15 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html"
+                            class="stop-track-btn"
+                        >
+                            View Route →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- =========================
+                         STOP 10
+                    ========================== -->
+
+                    <article
+                        class="stop-card"
+                        data-stop="narasaraopet"
+                    >
+
+                        <div class="stop-card-top">
+
+                            <div class="stop-icon">
+                                🚏
+                            </div>
+
+                            <span class="stop-status">
+                                ● Active
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            Narasaraopet
+                        </h3>
+
+                        <p class="stop-address">
+                            Narasaraopet Bus Station
+                        </p>
+
+
+                        <div class="stop-routes">
+
+                            <span>
+                                Routes
+                            </span>
+
+                            <strong>
+                                405 · 510
+                            </strong>
+
+                        </div>
+
+
+                        <div class="upcoming-bus">
+
+                            <div>
+
+                                <small>
+                                    NEXT BUS
+                                </small>
+
+                                <strong>
+                                    Bus 510
+                                </strong>
+
+                            </div>
+
+                            <span>
+                                10 min
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="tracking.html"
+                            class="stop-track-btn"
+                        >
+                            Track Bus →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     NO RESULTS
+                ================================== -->
+
+                <div
+                    class="no-stops"
+                    id="noStops"
+                    style="display: none;"
+                >
+
+                    <div class="no-stops-icon">
+                        🚏
+                    </div>
+
+                    <h3>
+                        No bus stops found
+                    </h3>
+
+                    <p>
+                        Try searching for another
+                        stop or location.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             QUICK INFO
+        ================================== -->
+
+        <section class="stops-info-section">
+
+            <div class="container">
+
+
+                <div class="stops-info-grid">
+
+
+                    <div class="stops-info-card">
+
+                        <div class="stops-info-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Nearby Stops
+                            </strong>
+
+                            <span>
+                                Find stops around you
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stops-info-card">
+
+                        <div class="stops-info-icon">
+                            🚌
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Live Buses
+                            </strong>
+
+                            <span>
+                                See buses approaching
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stops-info-card">
+
+                        <div class="stops-info-icon">
+                            ⏱️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Live ETA
+                            </strong>
+
+                            <span>
+                                Know when your bus arrives
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             FOOTER
+        ================================== -->
+
+        <footer class="footer">
+
+            <div class="container footer-container">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="logo"
+                    >
+                        🚌 Bus<span class="logo-highlight">
+                            Track
+                        </span>
+                    </a>
+
+                    <p>
+                        Smart transportation for
+                        smarter journeys.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+
+                    <div>
+
+                        <h4>
+                            Platform
+                        </h4>
+
+                        <a href="tracking.html">
+                            Live Tracking
+                        </a>
+
+                        <a href="routes.html">
+                            Routes
+                        </a>
+
+                        <a href="stops.html">
+                            Bus Stops
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Account
+                        </h4>
+
+                        <a href="login.html">
+                            Login
+                        </a>
+
+                        <a href="register.html">
+                            Register
+                        </a>
+
+                        <a href="profile.html">
+                            Profile
+                        </a>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Company
+                        </h4>
+
+                        <a href="#">
+                            About Us
+                        </a>
+
+                        <a href="#">
+                            Contact
+                        </a>
+
+                        <a href="#">
+                            Privacy
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <div class="container">
+
+                    <p>
+                        © 2026 BusTrack.
+                        All rights reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="../js/app.js"></script>
+
+    <script src="../js/stops.js"></script>
+
+
+</body>
+
+</html>

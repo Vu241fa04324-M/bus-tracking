@@ -1,0 +1,1738 @@
+/* =========================================
+   BUS TRACK - LIVE TRACKING STYLES
+========================================= */
+
+
+/* =========================================
+   TRACKING PAGE
+========================================= */
+
+.tracking-page {
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TRACKING HEADER
+========================================= */
+
+.tracking-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 45px 0 35px;
+}
+
+.tracking-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.live-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #16a34a;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.live-status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(34, 197, 94, 0.12);
+
+    animation: trackingPulse 1.5s infinite;
+}
+
+@keyframes trackingPulse {
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0.4);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 7px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.tracking-header h1 {
+    margin-top: 8px;
+
+    font-size: 38px;
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+.tracking-header p {
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.last-updated {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+.last-updated strong {
+    margin-top: 3px;
+
+    color: #0f172a;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.tracking-search-section {
+    padding: 25px 0 20px;
+
+    background: #f8fafc;
+}
+
+.tracking-search {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 6px;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.tracking-search-input {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 15px;
+}
+
+.tracking-search-input span {
+    font-size: 17px;
+}
+
+.tracking-search-input input {
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #0f172a;
+
+    font-size: 13px;
+}
+
+.tracking-search-input input::placeholder {
+    color: #94a3b8;
+}
+
+.tracking-search-btn {
+    height: 45px;
+
+    padding: 0 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tracking-search-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   QUICK FILTERS
+========================================= */
+
+.quick-filters {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+    flex-wrap: wrap;
+}
+
+.quick-filters > span {
+    color: #64748b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    margin-right: 3px;
+}
+
+.filter-btn {
+    border: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    padding: 6px 11px;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+}
+
+
+/* =========================================
+   MAIN TRACKING AREA
+========================================= */
+
+.tracking-main {
+    padding: 15px 0 60px;
+}
+
+.tracking-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.55fr)
+        minmax(330px, 0.75fr);
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   MAP CARD
+========================================= */
+
+.live-map-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.map-card-header {
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 18px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.map-card-header h2 {
+    font-size: 15px;
+}
+
+.map-card-header span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+.map-controls {
+    display: flex;
+
+    gap: 5px;
+}
+
+.map-controls button {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.map-controls button:hover {
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+
+    background: #eff6ff;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.tracking-map {
+    height: 560px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe 0%,
+            #e0f2fe 45%,
+            #dcfce7 100%
+        );
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Map grid */
+
+.tracking-map::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -100px;
+
+    opacity: 0.35;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 96%,
+            #94a3b8 96%
+        ),
+        linear-gradient(
+            transparent 96%,
+            #94a3b8 96%
+        );
+
+    background-size:
+        55px 55px;
+
+    transform: rotate(-4deg);
+}
+
+
+/* =========================================
+   MAP WATER
+========================================= */
+
+.map-water {
+    position: absolute;
+
+    width: 180px;
+    height: 700px;
+
+    right: 5%;
+
+    top: -80px;
+
+    background:
+        rgba(96, 165, 250, 0.28);
+
+    border-radius: 45%;
+
+    transform: rotate(13deg);
+}
+
+
+/* =========================================
+   MAP ROADS
+========================================= */
+
+.map-road {
+    position: absolute;
+
+    background: #f8fafc;
+
+    border:
+        7px solid #cbd5e1;
+
+    border-radius: 100px;
+
+    z-index: 1;
+}
+
+.map-road-1 {
+    width: 850px;
+    height: 70px;
+
+    left: -180px;
+    top: 120px;
+
+    transform: rotate(17deg);
+}
+
+.map-road-2 {
+    width: 800px;
+    height: 65px;
+
+    left: -150px;
+    top: 355px;
+
+    transform: rotate(-20deg);
+}
+
+.map-road-3 {
+    width: 75px;
+    height: 800px;
+
+    left: 42%;
+
+    top: -130px;
+
+    transform: rotate(12deg);
+}
+
+.map-road-4 {
+    width: 650px;
+    height: 55px;
+
+    left: 20px;
+    top: 470px;
+
+    transform: rotate(4deg);
+}
+
+
+/* Road inner lines */
+
+.map-road::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 50%;
+
+    height: 2px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #94a3b8 0,
+            #94a3b8 15px,
+            transparent 15px,
+            transparent 30px
+        );
+
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   AREA LABELS
+========================================= */
+
+.map-area {
+    position: absolute;
+
+    z-index: 2;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    opacity: 0.7;
+}
+
+.area-1 {
+    left: 12%;
+    top: 15%;
+}
+
+.area-2 {
+    left: 50%;
+    top: 65%;
+}
+
+.area-3 {
+    right: 15%;
+    top: 28%;
+}
+
+
+/* =========================================
+   BUS STOPS
+========================================= */
+
+.tracking-stop {
+    position: absolute;
+
+    z-index: 6;
+
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+    place-items: center;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.18);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.tracking-stop:hover {
+    transform: scale(1.2);
+}
+
+.stop-a {
+    left: 17%;
+    top: 25%;
+}
+
+.stop-b {
+    left: 42%;
+    top: 48%;
+}
+
+.stop-c {
+    right: 32%;
+    top: 70%;
+}
+
+.stop-d {
+    right: 13%;
+    top: 30%;
+}
+
+
+/* =========================================
+   BUS MARKERS
+========================================= */
+
+.tracking-bus {
+    position: absolute;
+
+    z-index: 10;
+
+    width: 47px;
+    height: 47px;
+
+    display: grid;
+    place-items: center;
+
+    border: 3px solid #ffffff;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.35);
+
+    transition:
+        left 1s ease,
+        top 1s ease,
+        transform 0.2s ease;
+}
+
+.tracking-bus:hover {
+    transform: scale(1.12);
+}
+
+.tracking-bus.selected {
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 0 7px rgba(37, 99, 235, 0.18),
+        0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.bus-101 {
+    left: 31%;
+    top: 32%;
+}
+
+.bus-205 {
+    left: 57%;
+    top: 24%;
+}
+
+.bus-310 {
+    left: 65%;
+    top: 58%;
+}
+
+.bus-405 {
+    left: 24%;
+    top: 70%;
+}
+
+.bus-map-label {
+    position: absolute;
+
+    left: 50%;
+    bottom: -21px;
+
+    transform: translateX(-50%);
+
+    padding: 3px 6px;
+
+    background: #0f172a;
+
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   USER LOCATION
+========================================= */
+
+.user-location {
+    position: absolute;
+
+    z-index: 8;
+
+    left: 55%;
+    top: 45%;
+
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(37, 99, 235, 0.15);
+
+    border-radius: 50%;
+}
+
+.user-location span {
+    width: 9px;
+    height: 9px;
+
+    background: #2563eb;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================
+   MAP ZOOM
+========================================= */
+
+.map-zoom-level {
+    position: absolute;
+
+    left: 14px;
+    bottom: 14px;
+
+    z-index: 20;
+
+    padding: 5px 8px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 5px;
+
+    color: #475569;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   MAP LEGEND
+========================================= */
+
+.map-legend {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 10px 18px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #64748b;
+
+    font-size: 9px;
+}
+
+.map-legend > div {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.legend-bus {
+    font-size: 14px;
+}
+
+.legend-stop {
+    width: 8px;
+    height: 8px;
+
+    background: #2563eb;
+
+    border: 2px solid #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 1px #2563eb;
+}
+
+.legend-user {
+    width: 8px;
+    height: 8px;
+
+    background: #2563eb;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   BUS DETAILS PANEL
+========================================= */
+
+.bus-details-panel {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =========================================
+   SELECTED BUS
+========================================= */
+
+.selected-bus-card {
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.selected-bus-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.selected-bus-number {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+}
+
+.selected-bus-number span {
+    color: #94a3b8;
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+.selected-bus-number strong {
+    color: #2563eb;
+
+    font-size: 27px;
+
+    line-height: 1;
+}
+
+.bus-live-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 8px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+}
+
+.bus-live-badge span {
+    width: 5px;
+    height: 5px;
+
+    background: #16a34a;
+
+    border-radius: 50%;
+}
+
+.selected-route {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 16px;
+
+    color: #334155;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.route-line {
+    color: #94a3b8;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+.bus-driver {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 17px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #f1f5f9;
+}
+
+.driver-avatar {
+    width: 35px;
+    height: 35px;
+
+    display: grid;
+    place-items: center;
+
+    background: #f1f5f9;
+
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+.bus-driver div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.bus-driver strong {
+    color: #334155;
+
+    font-size: 10px;
+}
+
+.bus-driver span {
+    color: #16a34a;
+
+    font-size: 8px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   ETA CARD
+========================================= */
+
+.eta-card {
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #dbeafe
+        );
+
+    border:
+        1px solid #bfdbfe;
+
+    border-radius: 15px;
+}
+
+.eta-main {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.eta-main span {
+    color: #475569;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.eta-main strong {
+    color: #2563eb;
+
+    font-size: 27px;
+}
+
+.eta-progress {
+    height: 6px;
+
+    margin-top: 13px;
+
+    background: #bfdbfe;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.eta-progress-bar {
+    width: 72%;
+
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: inherit;
+
+    transition: width 0.5s ease;
+}
+
+.eta-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+}
+
+.eta-info span {
+    color: #64748b;
+
+    font-size: 9px;
+}
+
+.eta-info strong {
+    color: #334155;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   JOURNEY CARD
+========================================= */
+
+.journey-card {
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+}
+
+.journey-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 13px;
+}
+
+.journey-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.journey-row:last-child {
+    border-bottom: none;
+}
+
+.journey-icon {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+.journey-icon.blue {
+    background: #dbeafe;
+}
+
+.journey-icon.green {
+    background: #dcfce7;
+}
+
+.journey-icon.orange {
+    background: #fef3c7;
+}
+
+.journey-icon.purple {
+    background: #ede9fe;
+}
+
+.journey-row > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.journey-row span {
+    color: #94a3b8;
+
+    font-size: 8px;
+}
+
+.journey-row strong {
+    margin-top: 2px;
+
+    color: #334155;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   UPCOMING STOPS
+========================================= */
+
+.upcoming-card {
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 15px;
+}
+
+.upcoming-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+.upcoming-header h3 {
+    font-size: 13px;
+}
+
+.upcoming-header span {
+    color: #94a3b8;
+
+    font-size: 9px;
+}
+
+.stop-list {
+    position: relative;
+}
+
+.stop-list::before {
+    content: "";
+
+    position: absolute;
+
+    left: 6px;
+
+    top: 9px;
+
+    bottom: 9px;
+
+    width: 1px;
+
+    background: #cbd5e1;
+}
+
+.timeline-stop {
+    min-height: 49px;
+
+    display: grid;
+
+    grid-template-columns: 14px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    position: relative;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+
+    position: relative;
+
+    z-index: 2;
+
+    background: #ffffff;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 50%;
+}
+
+.timeline-stop.active .timeline-dot {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.timeline-stop > div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.timeline-stop strong {
+    color: #334155;
+
+    font-size: 9px;
+}
+
+.timeline-stop span {
+    color: #94a3b8;
+
+    font-size: 8px;
+}
+
+.timeline-stop time {
+    color: #64748b;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACTIVE BUSES SECTION
+========================================= */
+
+.active-buses-section {
+    padding: 60px 0 80px;
+
+    background: #f1f5f9;
+}
+
+.active-buses-section .section-top {
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.active-buses-section .section-label {
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.active-buses-section h2 {
+    margin-top: 5px;
+
+    font-size: 29px;
+
+    letter-spacing: -0.7px;
+}
+
+.active-count {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #16a34a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.active-count span {
+    width: 7px;
+    height: 7px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   ACTIVE BUS CARDS
+========================================= */
+
+.active-buses-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.active-bus-card {
+    text-align: left;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 13px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.active-bus-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.08);
+
+    border-color: #bfdbfe;
+}
+
+.active-bus-card.selected {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+.active-bus-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.active-bus-number {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+.active-badge {
+    padding: 4px 6px;
+
+    background: #dcfce7;
+
+    color: #15803d;
+
+    border-radius: 4px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+}
+
+.active-bus-card h3 {
+    margin-top: 15px;
+
+    color: #334155;
+
+    font-size: 11px;
+}
+
+.active-bus-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 14px;
+
+    padding-top: 11px;
+
+    border-top: 1px solid #f1f5f9;
+}
+
+.active-bus-info span {
+    color: #94a3b8;
+
+    font-size: 8px;
+}
+
+.active-bus-info strong {
+    color: #16a34a;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .tracking-page,
+body.dark .tracking-search-section {
+    background: #0f172a;
+}
+
+body.dark .tracking-header,
+body.dark .live-map-card,
+body.dark .selected-bus-card,
+body.dark .journey-card,
+body.dark .upcoming-card,
+body.dark .active-bus-card {
+    background: #1e293b;
+
+    border-color: #334155;
+}
+
+body.dark .tracking-header h1,
+body.dark .map-card-header h2,
+body.dark .journey-card h3,
+body.dark .upcoming-header h3,
+body.dark .active-bus-card h3,
+body.dark .last-updated strong {
+    color: #f8fafc;
+}
+
+body.dark .tracking-header p,
+body.dark .map-card-header span,
+body.dark .last-updated,
+body.dark .journey-row span,
+body.dark .timeline-stop span,
+body.dark .active-bus-info span {
+    color: #94a3b8;
+}
+
+body.dark .tracking-search,
+body.dark .tracking-search-input input,
+body.dark .map-controls button,
+body.dark .filter-btn {
+    background: #1e293b;
+
+    color: #f8fafc;
+
+    border-color: #334155;
+}
+
+body.dark .tracking-search-input input::placeholder {
+    color: #64748b;
+}
+
+body.dark .map-card-header,
+body.dark .map-legend {
+    border-color: #334155;
+}
+
+body.dark .map-controls button {
+    color: #cbd5e1;
+}
+
+body.dark .selected-route,
+body.dark .bus-driver strong,
+body.dark .journey-row strong,
+body.dark .timeline-stop strong {
+    color: #e2e8f0;
+}
+
+body.dark .bus-driver {
+    border-color: #334155;
+}
+
+body.dark .journey-row {
+    border-color: #334155;
+}
+
+body.dark .active-buses-section {
+    background: #111c31;
+}
+
+body.dark .active-bus-info {
+    border-color: #334155;
+}
+
+body.dark .map-zoom-level {
+    background: rgba(30, 41, 59, 0.9);
+
+    border-color: #334155;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .tracking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bus-details-panel {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .selected-bus-card {
+        grid-column: span 2;
+    }
+
+    .upcoming-card {
+        grid-column: span 2;
+    }
+
+    .active-buses-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .tracking-header {
+        padding: 32px 0 25px;
+    }
+
+    .tracking-title-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .tracking-header h1 {
+        font-size: 30px;
+    }
+
+    .tracking-header p {
+        font-size: 12px;
+    }
+
+    .last-updated {
+        align-items: flex-start;
+    }
+
+
+    /* Search */
+
+    .tracking-search {
+        flex-direction: column;
+
+        padding: 7px;
+
+        gap: 7px;
+    }
+
+    .tracking-search-input {
+        width: 100%;
+    }
+
+    .tracking-search-btn {
+        width: 100%;
+    }
+
+    .quick-filters {
+        margin-top: 10px;
+    }
+
+
+    /* Map */
+
+    .tracking-main {
+        padding-top: 5px;
+    }
+
+    .tracking-grid {
+        gap: 12px;
+    }
+
+    .map-card-header {
+        padding: 11px 13px;
+    }
+
+    .map-card-header h2 {
+        font-size: 13px;
+    }
+
+    .tracking-map {
+        height: 400px;
+    }
+
+    .map-legend {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        padding: 9px 12px;
+    }
+
+
+    /* Bus details */
+
+    .bus-details-panel {
+        display: flex;
+
+        gap: 10px;
+    }
+
+    .selected-bus-card,
+    .upcoming-card {
+        grid-column: auto;
+    }
+
+
+    /* Active buses */
+
+    .active-buses-section {
+        padding: 45px 0 60px;
+    }
+
+    .active-buses-section .section-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .active-buses-section h2 {
+        font-size: 26px;
+    }
+
+    .active-buses-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .tracking-header h1 {
+        font-size: 27px;
+    }
+
+    .tracking-map {
+        height: 350px;
+    }
+
+    .map-controls button {
+        width: 28px;
+        height: 28px;
+    }
+
+    .selected-route {
+        font-size: 9px;
+    }
+
+    .eta-main strong {
+        font-size: 23px;
+    }
+
+}

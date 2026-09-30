@@ -1,0 +1,231 @@
+[
+    {
+        "id": "S001",
+        "name": "City Center",
+        "routeId": "R001",
+        "order": 1,
+        "latitude": 16.3067,
+        "longitude": 80.4365,
+        "estimatedArrival": "08:00 AM"
+    },
+    {
+        "id": "S002",
+        "name": "Main Market",
+        "routeId": "R001",
+        "order": 2,
+        "latitude": 16.3098,
+        "longitude": 80.4382,
+        "estimatedArrival": "08:05 AM"
+    },
+    {
+        "id": "S003",
+        "name": "Brodipet",
+        "routeId": "R001",
+        "order": 3,
+        "latitude": 16.3025,
+        "longitude": 80.4401,
+        "estimatedArrival": "08:10 AM"
+    },
+    {
+        "id": "S004",
+        "name": "Arundelpet",
+        "routeId": "R001",
+        "order": 4,
+        "latitude": 16.3012,
+        "longitude": 80.4335,
+        "estimatedArrival": "08:15 AM"
+    },
+    {
+        "id": "S005",
+        "name": "Railway Station",
+        "routeId": "R001",
+        "order": 5,
+        "latitude": 16.3068,
+        "longitude": 80.4270,
+        "estimatedArrival": "08:25 AM"
+    },
+
+    {
+        "id": "S006",
+        "name": "RTC Bus Stand",
+        "routeId": "R002",
+        "order": 1,
+        "latitude": 16.3125,
+        "longitude": 80.4372,
+        "estimatedArrival": "08:00 AM"
+    },
+    {
+        "id": "S007",
+        "name": "Market Road",
+        "routeId": "R002",
+        "order": 2,
+        "latitude": 16.3151,
+        "longitude": 80.4400,
+        "estimatedArrival": "08:06 AM"
+    },
+    {
+        "id": "S008",
+        "name": "Lakshmipuram",
+        "routeId": "R002",
+        "order": 3,
+        "latitude": 16.3182,
+        "longitude": 80.4318,
+        "estimatedArrival": "08:12 AM"
+    },
+    {
+        "id": "S009",
+        "name": "University Road",
+        "routeId": "R002",
+        "order": 4,
+        "latitude": 16.3205,
+        "longitude": 80.4475,
+        "estimatedArrival": "08:20 AM"
+    },
+    {
+        "id": "S010",
+        "name": "University",
+        "routeId": "R002",
+        "order": 5,
+        "latitude": 16.3250,
+        "longitude": 80.4500,
+        "estimatedArrival": "08:30 AM"
+    },
+
+    {
+        "id": "S011",
+        "name": "Guntur Bus Stand",
+        "routeId": "R003",
+        "order": 1,
+        "latitude": 16.3055,
+        "longitude": 80.4255,
+        "estimatedArrival": "08:00 AM"
+    },
+    {
+        "id": "S012",
+        "name": "Nallapadu",
+        "routeId": "R003",
+        "order": 2,
+        "latitude": 16.2915,
+        "longitude": 80.4250,
+        "estimatedArrival": "08:12 AM"
+    },
+    {
+        "id": "S013",
+        "name": "Perecherla",
+        "routeId": "R003",
+        "order": 3,
+        "latitude": 16.2780,
+        "longitude": 80.4200,
+        "estimatedArrival": "08:25 AM"
+    },
+    {
+        "id": "S014",
+        "name": "Mangalagiri Road",
+        "routeId": "R003",
+        "order": 4,
+        "latitude": 16.2650,
+        "longitude": 80.4100,
+        "estimatedArrival": "08:40 AM"
+    },
+    {
+        "id": "S015",
+        "name": "Amaravati",
+        "routeId": "R003",
+        "order": 5,
+        "latitude": 16.5730,
+        "longitude": 80.3575,
+        "estimatedArrival": "08:55 AM"
+    },
+
+    {
+        "id": "S016",
+        "name": "Brodipet",
+        "routeId": "R004",
+        "order": 1,
+        "latitude": 16.3025,
+        "longitude": 80.4401,
+        "estimatedArrival": "08:00 AM"
+    },
+    {
+        "id": "S017",
+        "name": "Chandramouli Nagar",
+        "routeId": "R004",
+        "order": 2,
+        "latitude": 16.2985,
+        "longitude": 80.4460,
+        "estimatedArrival": "08:07 AM"
+    },
+    {
+        "id": "S018",
+        "name": "Namburu Road",
+        "routeId": "R004",
+        "order": 3,
+        "latitude": 16.2850,
+        "longitude": 80.4550,
+        "estimatedArrival": "08:15 AM"
+    },
+    {
+        "id": "S019",
+        "name": "Namburu Junction",
+        "routeId": "R004",
+        "order": 4,
+        "latitude": 16.2750,
+        "longitude": 80.4650,
+        "estimatedArrival": "08:25 AM"
+    },
+    {
+        "id": "S020",
+        "name": "Namburu",
+        "routeId": "R004",
+        "order": 5,
+        "latitude": 16.2700,
+        "longitude": 80.4700,
+        "estimatedArrival": "08:35 AM"
+    },
+
+    {
+        "id": "S021",
+        "name": "NTR Bus Station",
+        "routeId": "R005",
+        "order": 1,
+        "latitude": 16.3055,
+        "longitude": 80.4255,
+        "estimatedArrival": "08:00 AM"
+    },
+    {
+        "id": "S022",
+        "name": "Arundelpet",
+        "routeId": "R005",
+        "order": 2,
+        "latitude": 16.3012,
+        "longitude": 80.4335,
+        "estimatedArrival": "08:05 AM"
+    },
+    {
+        "id": "S023",
+        "name": "Kothapet",
+        "routeId": "R005",
+        "order": 3,
+        "latitude": 16.2960,
+        "longitude": 80.4290,
+        "estimatedArrival": "08:10 AM"
+    },
+    {
+        "id": "S024",
+        "name": "Medical College Road",
+        "routeId": "R005",
+        "order": 4,
+        "latitude": 16.2900,
+        "longitude": 80.4200,
+        "estimatedArrival": "08:16 AM"
+    },
+    {
+        "id": "S025",
+        "name": "Medical College",
+        "routeId": "R005",
+        "order": 5,
+        "latitude": 16.2850,
+        "longitude": 80.4150,
+        "estimatedArrival": "08:22 AM"
+    }
+]
